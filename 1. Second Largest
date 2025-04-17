@@ -1,0 +1,14 @@
+class Solution {
+  public:
+    int getSecondLargest(vector<int> &arr) {
+        int lar=-1,slar=-1;
+        for(int n:arr){
+            lar=max(n,lar);
+        }
+        for(int n:arr){
+            if(n!=lar){
+                slar=max(slar,n);
+            }
+        }return slar;
+    }
+};
